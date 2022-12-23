@@ -1,0 +1,52 @@
+Software design
+
+1- a python file to handle user input and output
+2- a python file to handle writing and reading for database files
+3- a python file to handle the logic of the program
+4- a python file to handle the GUI (to be empty at first)
+5- a python file to handle the cloud database (to be empty at first)
+
+1:
+functions to be written in this file
+1- ask for user input
+2- read user input
+3- verify user input (maybe be overloaded)
+4- print output to user
+5- welcome and goodbye messages
+6- display menu
+
+
+
+2:
+Functions to be written in this file
+1- read from database file
+2- write to database file
+3- verify database file
+4- create database file
+5- delete database file
+6- edit database file
+7- display database file
+8- search database file
+
+
+
+3:
+This file will be the main file of the program
+It will use the other two files as modules
+import first file
+import second file
+
+main function
+  a- call the welcome message function
+  b- call the menu function
+      A- see last workout
+          1- call the read database function
+          2- call the display database function
+      B- add new workout
+          1- call the user input function for number of reps
+          2- call the user input function for weight
+          3- call the user input function for workout duration
+          4- call the autosave to database function      
+      C- quit
+          1- call the goodbye message function
+          2- exit program

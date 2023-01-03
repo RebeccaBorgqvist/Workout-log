@@ -1,0 +1,271 @@
+{
+    "back and bicep":
+    [
+        {
+            "exercise": "Machine row",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Pullups",
+            "reps": 8,
+            "sets": 4
+        }
+        ,
+        {
+            "exercise": "Pulldown",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Barbell row",
+            "reps": 15,
+            "sets": 4
+        }
+        ,
+        {
+            "exercise": "Straight arm pulldown",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Curls",
+            "reps": 12,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Seated incline curls",
+            "reps": 12,
+            "sets": 3
+        }
+    ]
+    ,
+    "back":
+    [
+        {
+            "exercise": "Pulldown",
+            "reps": 12,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Narrow pulldown",
+            "reps": 12,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Cable row",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Barbell row",
+            "reps": 15,
+            "sets": 4
+        }
+        ,
+        {
+            "exercise": "Straight arm pulldown",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Facepull",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Machine row",
+            "reps": 15,
+            "sets": 3
+        }
+    ]
+    ,
+    "chest and tricep":
+    [
+        {
+            "exercise": "Pec dec fly",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Incline chestpress",
+            "reps": 12,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Dips",
+            "reps": 10,
+            "sets": 4
+        }
+        ,
+        {
+            "exercise": "High cable fly",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Low cable fly",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Tricep pulldown",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Tricep extension",
+            "reps": 15,
+            "sets": 3
+        }
+    ]
+    ,
+    "legs and shoulders":
+    [
+        {
+            "exercise": "Squats",
+            "reps": 10,
+            "sets": 5
+        }
+        ,
+        {
+            "exercise": "Romanian deadlift",
+            "reps": 15,
+            "sets": 4
+        }
+        ,
+        {
+            "exercise": "Leg extension",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Leg curl",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Incline cable Y-raise",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Lat raise",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Militarypress",
+            "reps": 15,
+            "sets": 3
+        }
+    ]
+    ,
+    "legs":
+    [
+        {
+            "exercise": "Squats",
+            "reps": 15,
+            "sets": 4
+        }
+        ,
+        {
+            "exercise": "Romanian deadlift",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Leg extension",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Leg curl",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Leg press",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Cable kickbacks",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Hyperextension",
+            "reps": 15,
+            "sets": 3
+        }
+    ]
+    ,
+    "shoulders":
+    [
+        {
+            "exercise": "Rear delt",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Militarypress",
+            "reps": 10,
+            "sets": 4
+        }
+        ,
+        {
+            "exercise": "Incline cable Y-raise",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Cable sideraise",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Seated shoulderpress",
+            "reps": 12,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Lat raise",
+            "reps": 15,
+            "sets": 3
+        }
+        ,
+        {
+            "exercise": "Uprows",
+            "reps": 12,
+            "sets": 3
+        }
+    ]
+}

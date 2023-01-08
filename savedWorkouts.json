@@ -1,31 +1,526 @@
 {
-    "back and bicep":
-    [
-        {}
-    ]
-    ,
-    "back":
-    [
-        {}
-    ]
-    ,
-    "chest and tricep":
-    [
-        {}
-    ]
-    ,
-    "legs and shoulders":
-    [
-        {}
-    ]
-    ,
-    "legs":
-    [
-        {}
-    ]
-    ,
-    "shoulders":
-    [
-        {}
+    "back and bicep": [
+        {
+            "Date": "2023-01-03",
+            "Exercises": [
+                {
+                    "Name": "machine row",
+                    "Weight": 3.0,
+                    "Reps": 3,
+                    "Sets": 1
+                },
+                {
+                    "Name": "pullups",
+                    "Weight": 3.0,
+                    "Reps": 3,
+                    "Sets": 1
+                },
+                {
+                    "Name": "pulldown",
+                    "Weight": 3.0,
+                    "Reps": 3,
+                    "Sets": 1
+                },
+                {
+                    "Name": "barbell row",
+                    "Weight": 3.0,
+                    "Reps": 3,
+                    "Sets": 1
+                },
+                {
+                    "Name": "straight arm pulldown",
+                    "Weight": 3.0,
+                    "Reps": 3,
+                    "Sets": 1
+                },
+                {
+                    "Name": "curls",
+                    "Weight": 3.0,
+                    "Reps": 3,
+                    "Sets": 1
+                },
+                {
+                    "Name": "seated incline curls",
+                    "Weight": 3.0,
+                    "Reps": 3,
+                    "Sets": 1
+                }
+            ]
+        },
+        {
+            "Date": "2023-01-04",
+            "Exercises": [
+                {
+                    "Name": "machine row",
+                    "Weight": 2.0,
+                    "Reps": 2,
+                    "Sets": 1
+                },
+                {
+                    "Name": "pullups",
+                    "Weight": 2.0,
+                    "Reps": 2,
+                    "Sets": 1
+                },
+                {
+                    "Name": "pulldown",
+                    "Weight": 2.0,
+                    "Reps": 2,
+                    "Sets": 1
+                },
+                {
+                    "Name": "barbell row",
+                    "Weight": 2.0,
+                    "Reps": 2,
+                    "Sets": 1
+                },
+                {
+                    "Name": "straight arm pulldown",
+                    "Weight": 2.0,
+                    "Reps": 2,
+                    "Sets": 1
+                },
+                {
+                    "Name": "curls",
+                    "Weight": 2.0,
+                    "Reps": 2,
+                    "Sets": 1
+                },
+                {
+                    "Name": "seated incline curls",
+                    "Weight": 2.0,
+                    "Reps": 2,
+                    "Sets": 1
+                }
+            ]
+        },
+        {
+            "Date": "2023-01-05",
+            "Exercises": [
+                {
+                    "Name": "machine row",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "pullups",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "pulldown",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "barbell row",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "straight arm pulldown",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "curls",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "seated incline curls",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                }
+            ]
+        }
+    ],
+    "back": [
+        {
+            "Date": "2023-01-04",
+            "Exercises": [
+                {
+                    "Name": "pulldown",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "narrow pulldown",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "cable row",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "barbell row",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "straight arm pulldown",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "facepull",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "machine row",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                }
+            ]
+        }
+    ],
+    "chest and tricep": [
+        {
+            "Date": "2023-01-05",
+            "Exercises": [
+                {
+                    "Name": "pec dec fly",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "incline chestpress",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "dips",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "high cable fly",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "low cable fly",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "tricep pulldown",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                },
+                {
+                    "Name": "tricep extension",
+                    "Weight": 1.0,
+                    "Reps": 1,
+                    "Sets": 1
+                }
+            ]
+        }
+    ],
+    "legs and shoulders": [
+        {
+            "Date": "2023-01-06",
+            "Exercises": [
+                {
+                    "Name": "squats",
+                    "Weight": 40.0,
+                    "Reps": 8,
+                    "Sets": 2
+                },
+                {
+                    "Name": "squats",
+                    "Weight": 40.0,
+                    "Reps": 8,
+                    "Sets": 2
+                },
+                {
+                    "Name": "romanian deadlift",
+                    "Weight": 50.0,
+                    "Reps": 12,
+                    "Sets": 2
+                },
+                {
+                    "Name": "romanian deadlift",
+                    "Weight": 50.0,
+                    "Reps": 12,
+                    "Sets": 2
+                },
+                {
+                    "Name": "leg extension",
+                    "Weight": 40.0,
+                    "Reps": 7,
+                    "Sets": 3
+                },
+                {
+                    "Name": "leg extension",
+                    "Weight": 40.0,
+                    "Reps": 7,
+                    "Sets": 3
+                },
+                {
+                    "Name": "leg extension",
+                    "Weight": 40.0,
+                    "Reps": 7,
+                    "Sets": 3
+                },
+                {
+                    "Name": "leg curl",
+                    "Weight": 39.0,
+                    "Reps": 14,
+                    "Sets": 1
+                },
+                {
+                    "Name": "incline cable Y-raise",
+                    "Weight": 3.75,
+                    "Reps": 12,
+                    "Sets": 2
+                },
+                {
+                    "Name": "incline cable Y-raise",
+                    "Weight": 3.75,
+                    "Reps": 12,
+                    "Sets": 2
+                },
+                {
+                    "Name": "lat raise",
+                    "Weight": 10.0,
+                    "Reps": 12,
+                    "Sets": 2
+                },
+                {
+                    "Name": "lat raise",
+                    "Weight": 10.0,
+                    "Reps": 12,
+                    "Sets": 2
+                },
+                {
+                    "Name": "militarypress",
+                    "Weight": 26.0,
+                    "Reps": 6,
+                    "Sets": 2
+                },
+                {
+                    "Name": "militarypress",
+                    "Weight": 26.0,
+                    "Reps": 6,
+                    "Sets": 2
+                }
+            ]
+        }
+    ],
+    "legs": [
+        {
+            "Date": "2023-01-03",
+            "Exercises": [
+                {
+                    "Name": "squats",
+                    "Weight": 40.0,
+                    "Reps": 10,
+                    "Sets": 1
+                },
+                {
+                    "Name": "romanian deadlift",
+                    "Weight": 30.0,
+                    "Reps": 15,
+                    "Sets": 1
+                },
+                {
+                    "Name": "leg extension",
+                    "Weight": 35.0,
+                    "Reps": 14,
+                    "Sets": 1
+                },
+                {
+                    "Name": "leg curl",
+                    "Weight": 46.0,
+                    "Reps": 8,
+                    "Sets": 1
+                },
+                {
+                    "Name": "leg press",
+                    "Weight": 0.0,
+                    "Reps": 0,
+                    "Sets": 1
+                },
+                {
+                    "Name": "cable kickbacks",
+                    "Weight": 10.0,
+                    "Reps": 15,
+                    "Sets": 1
+                },
+                {
+                    "Name": "hyperextension",
+                    "Weight": 10.0,
+                    "Reps": 12,
+                    "Sets": 1
+                }
+            ]
+        }
+    ],
+    "shoulders": [
+        {
+            "Date": "2023-01-02",
+            "Exercises": [
+                {
+                    "Name": "rear delt",
+                    "Weight": 28.5,
+                    "Reps": 10,
+                    "Sets": 1
+                },
+                {
+                    "Name": "militarypress",
+                    "Weight": 28.0,
+                    "Reps": 5,
+                    "Sets": 1
+                },
+                {
+                    "Name": "incline cable Y-raise",
+                    "Weight": 3.75,
+                    "Reps": 10,
+                    "Sets": 1
+                },
+                {
+                    "Name": "cable sideraise",
+                    "Weight": 3.75,
+                    "Reps": 10,
+                    "Sets": 1
+                },
+                {
+                    "Name": "seated shoulderpress",
+                    "Weight": 10.0,
+                    "Reps": 12,
+                    "Sets": 1
+                },
+                {
+                    "Name": "lat raise",
+                    "Weight": 10.0,
+                    "Reps": 10,
+                    "Sets": 1
+                },
+                {
+                    "Name": "uprows",
+                    "Weight": 0.0,
+                    "Reps": 0,
+                    "Sets": 1
+                }
+            ]
+        },
+        {
+            "Date": "2022-12-27",
+            "Exercises": [
+                {
+                    "Name": "rear delt",
+                    "Weight": 40.0,
+                    "Reps": 5,
+                    "Sets": 1
+                },
+                {
+                    "Name": "militarypress",
+                    "Weight": 22.0,
+                    "Reps": 10,
+                    "Sets": 1
+                },
+                {
+                    "Name": "incline cable Y-raise",
+                    "Weight": 3.75,
+                    "Reps": 15,
+                    "Sets": 1
+                },
+                {
+                    "Name": "cable sideraise",
+                    "Weight": 3.75,
+                    "Reps": 10,
+                    "Sets": 1
+                },
+                {
+                    "Name": "seated shoulderpress",
+                    "Weight": 12.5,
+                    "Reps": 5,
+                    "Sets": 1
+                },
+                {
+                    "Name": "lat raise",
+                    "Weight": 8.0,
+                    "Reps": 18,
+                    "Sets": 1
+                },
+                {
+                    "Name": "uprows",
+                    "Weight": 10.0,
+                    "Reps": 15,
+                    "Sets": 1
+                }
+            ]
+        },
+        {
+            "Date": "2022-12-20",
+            "Exercises": [
+                {
+                    "Name": "rear delt",
+                    "Weight": 28.5,
+                    "Reps": 12,
+                    "Sets": 1
+                },
+                {
+                    "Name": "militarypress",
+                    "Weight": 24.0,
+                    "Reps": 6,
+                    "Sets": 1
+                },
+                {
+                    "Name": "incline cable Y-raise",
+                    "Weight": 3.75,
+                    "Reps": 15,
+                    "Sets": 1
+                },
+                {
+                    "Name": "cable sideraise",
+                    "Weight": 3.75,
+                    "Reps": 10,
+                    "Sets": 1
+                },
+                {
+                    "Name": "seated shoulderpress",
+                    "Weight": 10.0,
+                    "Reps": 8,
+                    "Sets": 1
+                },
+                {
+                    "Name": "lat raise",
+                    "Weight": 8.0,
+                    "Reps": 16,
+                    "Sets": 1
+                },
+                {
+                    "Name": "uprows",
+                    "Weight": 10.0,
+                    "Reps": 15,
+                    "Sets": 1
+                }
+            ]
+        }
     ]
 }

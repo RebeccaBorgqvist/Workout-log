@@ -1,6 +1,6 @@
-import json 
+import json
 import matplotlib.pyplot as plt
-from os import system
+import os
 from datetime import datetime
 
 EXERCISE_FILE = "exerciseFile.json"
@@ -21,51 +21,9 @@ class Exercise:
     
     def __repr__(self):
         return f"{self.muscleGroup}\n {self.weight}KG\n {self.reps}\n {self.sets}\n"
-    
-    def printExercise(self):
-        if len(self.exercises[0]) == 0:
-            print("No exercises to print")
-            return
-        for exercises in self.exercises:
-            if exercises[0]["muscleGroup"]:
-                print("=" * 66)
-                print("=" * 66)
-                print("Day: {:<30}".format(exercises[0]["day"]))
-                for exercise in exercises:
-                    print("Exercise: {:<30} Reps: {:>5} Sets: {:>5}".format
-                          (exercise["muscleGroup"], exercise["reps"], exercise["sets"]))
-        print()
-    
-    def printExerciseList(self, muscleGroup):
-        for exercises in self.exercises:
-            if len(self.exercises[0]) == 0:
-                print("No exercises to print")
-                return
-            if muscleGroup == "all":
-                for exercises in self.exercises:
-                    if exercises[0]["muscleGroup"]:
-                        print("=" * 66)
-                        print("=" * 66)
-                        print("Day: {:<30}".format(exercises[0]["day"]))
-                    for exercise in exercises:
-                        print("Exercise: {:<30} Reps: {:>5} Sets: {:>5}".format
-                            (exercise["muscleGroup"], exercise["reps"], exercise["sets"]))
-            print()
-            
-    def getExercises(self, muscleGroup):
-        data = importExercises()
-        exerciseList = []
-        for group in data[muscleGroup].items():
-            for exerciseData in group:
-                exercise = {}
-                exercise["Musclegroup"] = muscleGroup
-                exercise["Reps"] = exerciseData ["reps"]
-                exercise["Sets"] = exerciseData ["sets"]
-        self.exercises.append(exerciseList)
-        return exerciseList
-    
-    def runExercise(self):
-        data = importExercises()
+
+    def runExercise():
+        data = loadExerciseFile()
         exerciseNumber = {
             "back and bicep": 1,
             "back": 2,
@@ -76,58 +34,94 @@ class Exercise:
         }
         muscleGroups = data.keys()
         
-        print("Choose a muscle group: ")
+        clear()
+        
+        print("\nChoose a muscle group: \n")
         for i, muscleGroups in enumerate(muscleGroups):
-            print(f"{i+1}. {muscleGroups}")
+            print(f"{i+1}) {muscleGroups}")
         
         choice = int(input())
         selectedMuscleGroup = [muscleGroups for muscleGroups, number in exerciseNumber.items() if number == choice][0]
         exercises = data.get(selectedMuscleGroup, [])
+        now = datetime.now()
+        dateString = now.strftime("%Y-%m-%d")
+        dataArray = []
+        
+        clear()
         
         sets = 0
+        
         for exercise in exercises:
-            print(f"Exercise: {exercise['exercise']}")
-            
+            print(f"\nExercise: {exercise['exercise']}")
+            exData = {
+                "Name": exercise["exercise"],
+                "Weight": 0.0,
+                "Reps": 0,
+                "Sets": 0
+            }
             while True:
-                weight = float(input("Enter weight: "))
-                reps = float(input("Enter reps: "))
+                weight = float(input("\nEnter weight: "))
+                reps = int(input("Enter reps: "))
                 
                 sets += 1
                 
-                continueExercise = input("Continue exercise? (y/n)")
+                exData["Weight"] = weight
+                exData["Reps"] = reps
+                exData["Sets"] = sets
+                dataArray.append(exData)
+                
+                while True:
+                    continueExercise = input("\n> Continue exercise? (y/n): ")
+                    if continueExercise.lower() == "y":
+                        break
+                    elif continueExercise.lower() == "n":
+                        sets = 0
+                        clear()
+                        break
+                    else:
+                        print("Invalid input. Please enter 'y' or 'n'.")
                 if continueExercise.lower() == "n":
                     break
-                
-                saveWorkout(exercise, weight, reps, sets)
-                
-        print("Workout is saved")
+    
             
+        dataToSave = {
+            "Date": dateString,
+            "Exercises": dataArray
+        }
+        
+        with open(SAVED_WORKOUTS, "r") as f:
+            newData = json.load(f)
+        newData[selectedMuscleGroup].insert(0, dataToSave)
+        
+        with open(SAVED_WORKOUTS, "w") as f:
+            json.dump(newData, f, indent=4)
+        
+        print("Workout is saved")
+        clear()
+                
              
 def getInput():
     while True:
-        userInput = input().lower()
-        userInput = userInput.split()
+        userInput = input(": ").lower().split()
         if len(userInput) >= 1:
             return userInput
         else:
             return "Error"
 
-# this opens exerciseFile.json
-def importExercises():
+
+def loadExerciseFile():
     with open(EXERCISE_FILE, "r") as f:
         data = json.load(f)  
-        f.close()
         return data
 
-# this open and read savedWorkouts.json
-def openSavedWorkout():
+
+def loadSavedWorkoutFile():
     with open(SAVED_WORKOUTS, "r") as f:
         data = json.load(f)
-        f.close()
         return data
 
-# this saves to savedWorkouts.json
-def saveWorkout(muscleGroup, weight, reps, sets):
+
+def saveWorkoutFile(muscleGroup, exercise, weight, reps, sets):
     now = datetime.now()
     dateString = now.strftime("%Y-%m-%d")
     with open(SAVED_WORKOUTS, "r") as f:
@@ -136,40 +130,118 @@ def saveWorkout(muscleGroup, weight, reps, sets):
     exerciseData = {
         "Date": dateString,
         "Musclegroup": muscleGroup,
+        "Exercise": exercise["exercise"],
         "Weight": weight,
         "Reps": reps,
         "Sets": sets
     }
-    data.insert(0, exerciseData)
+    data[muscleGroup].insert(0, exerciseData)
     
-    with open(EXERCISE_FILE, "w") as f:
-        json.dump(data, f, indent=4)
-        f.close()
+    with open(SAVED_WORKOUTS, "w") as f:
+        json.dump(data, f, indent=4) 
+
+
+def plotProgress():
+    # load the exercise data from the JSON file
+    exerciseData = loadSavedWorkoutFile()
     
-def welcomeMsg():
-    print("\nWelcome to your Workout Log")
-    print("Choose what you want to do\n")
+    # show a list of all muscle groups
+    print("\nSelect a muscle group:")
+    muscleGroups = list(exerciseData.keys())
+    for i, muscleGroup in enumerate(muscleGroups):
+        print(f"{i+1}: {muscleGroup}")
+    selectedMuscleGroup = muscleGroups[int(input()) - 1]
+
+    # show a list of all exercises
+    exerciseNames = []
+    for item in exerciseData[selectedMuscleGroup]:
+        for ex in item.get("Exercises", []):
+            exerciseNames.append(ex["Name"])
+    exerciseNames = list(set(exerciseNames))
+    print("\nSelect an exercise:")
+    for i, exerciseName in enumerate(exerciseNames):
+        print(f"{i+1}: {exerciseName}")
+    selectedExerciseName = exerciseNames[int(input()) - 1]
+
+    # create a list of all the unique dates
+    dates = []
+    for sublist in exerciseData.values():
+        for item in sublist:
+            for ex in item.get("Exercises", []):
+                if ex["Name"] == exerciseName:            
+                    try:
+                        dates.append(item["Date"])
+                    except KeyError:
+                        pass
+    dates = list(set(dates))
+
+    # create a list of reps and weights for the specified exercise
+    weights = []
+    reps = []
+    for musclegroup in exerciseData:
+        for item in exerciseData[musclegroup]:
+            for ex in item.get('Exercises', []):
+                if ex['Name'] == selectedExerciseName:
+                    weights.append(ex['Weight'])
+                    reps.append(ex['Reps'])
+                    break
+
+    if len(dates) == 0:
+        print("Error, exercise not found")
+        return
+    if len(dates) < 2:
+        print("Error, not enought data to plot")
+        return
+    
+    # plot the data
+    fig, ax = plt.subplots()
+    ax.plot(dates, weights, label=selectedExerciseName + " (Weights)")
+    ax.plot(dates, reps, label=selectedExerciseName + " (Reps)")
+    ax.legend()
+    ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.show()
+
+
+def printMenu():
+    print("\nWhat you want to do?\n")
     print("> Workout")
     print("> Progress")
+    print("> Help")
     print("> Quit")
-      
+
+
+def printHelp():
+    print("\n #1 - If you want to start a new workout, write 'workout' and press enter.")
+    print("\n #2 - If you want to see your progress, write 'progress', the musclegroup and press enter.")
+    print("      Here is an example: 'progress squats' - then will a graph show up")
+    print("\n #3 - If you want to exit the program, write guit and press enter.")   
+    print("\n #4 - If you want to clean the teminal, write 'clean' and press enter.")
+
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+
 def main():
-    welcomeMsg()
+    print("\nWelcome to your Workout Log")
     
     while True:
+        printMenu()
         userInput = getInput()
+        
         if userInput[0] == "workout":
-            Exercise.runExercise(userInput)
+            Exercise.runExercise()
         elif userInput[0] == "progress":
-            Exercise.printExerciseList(userInput)
+                plotProgress()
+        elif userInput[0] == "help":
+            printHelp()
         elif userInput[0] == "quit":
-            # TODO: implement autosave
             print("Log is shutting down")
             exit()
-        elif userInput[0] == "clear":
-            system("clear")
         else:
-            print("Error, could not run main")      
+            print("Error, could not valuate input")    
+            
+      
 
 if __name__ == "__main__":
      main()
